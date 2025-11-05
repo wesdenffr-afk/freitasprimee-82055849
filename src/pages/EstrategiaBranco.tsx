@@ -112,36 +112,40 @@ const EstrategiaBranco = () => {
 
         {/* Entry Status Section */}
         {showSignal && (
-          <>
-            {/* Entrada Confirmada Header */}
-            <div className="mt-4 mx-4 text-center">
-              <h2 className="text-2xl font-bold text-white/90">Entrada Confirmada</h2>
-            </div>
+          <div className="mt-6 mx-4">
+            {/* Main Card */}
+            <div className="bg-[#3a3d4a]/90 backdrop-blur-md rounded-3xl p-6 border border-white/10 shadow-2xl">
+              {/* Entrada Confirmada Header */}
+              <h2 className="text-center text-xl font-bold text-white/90 mb-6">Entrada Confirmada</h2>
 
-            {/* Horário e Logo Section */}
-            <div className="mt-6 mx-4 flex items-center justify-between gap-4">
-              {/* Horário - Left Side */}
-              <div className="flex-1 bg-[#3a3d4a]/80 backdrop-blur-sm rounded-2xl p-6 flex flex-col items-start justify-center border border-white/10">
-                <p className="text-sm text-white/70 font-medium mb-1">Horário</p>
-                <p className="text-5xl font-black text-white tabular-nums">{nextSignalTime}</p>
-              </div>
+              {/* Three Column Layout */}
+              <div className="grid grid-cols-3 gap-4 mb-6">
+                {/* Horário - Left */}
+                <div className="bg-[#2a2d3a]/60 rounded-2xl p-4 flex flex-col items-center justify-center">
+                  <p className="text-xs text-white/60 font-medium mb-2">Horário</p>
+                  <p className="text-3xl font-black text-white tabular-nums">{nextSignalTime}</p>
+                </div>
 
-              {/* Logo - Right Side */}
-              <div className="flex-1 bg-[#3a3d4a]/80 backdrop-blur-sm rounded-2xl p-6 flex flex-col items-center justify-center border border-white/10">
-                <p className="text-sm text-white/70 font-medium mb-3">Entrada</p>
-                <div className="w-20 h-20 bg-white rounded-2xl flex items-center justify-center p-3">
-                  <img src={logoBranco} alt="Branco" className="w-full h-full object-contain" />
+                {/* Logo Center - Larger */}
+                <div className="bg-white rounded-2xl p-4 flex items-center justify-center">
+                  <img src={logoBranco} alt="Branco" className="w-20 h-20 object-contain" />
+                </div>
+
+                {/* Entrada - Right */}
+                <div className="bg-[#2a2d3a]/60 rounded-2xl p-4 flex flex-col items-center justify-center">
+                  <p className="text-xs text-white/60 font-medium mb-2">Entrada</p>
+                  <div className="w-12 h-12 bg-white rounded-xl flex items-center justify-center">
+                    <img src={logoBranco} alt="Entrada" className="w-10 h-10 object-contain" />
+                  </div>
                 </div>
               </div>
-            </div>
 
-            {/* Pessoas Fizeram Entrada */}
-            <div className="mt-4 mx-4 text-center">
-              <p className="text-lg text-white/80 font-medium">
-                <span className="text-white font-bold">48</span> Pessoas Fizeram Entrada!
+              {/* Pessoas Fizeram Entrada */}
+              <p className="text-center text-base text-white/80 font-medium">
+                <span className="text-white font-bold">3</span> Pessoas Fizeram Entrada!
               </p>
             </div>
-          </>
+          </div>
         )}
 
         {!showSignal && (
