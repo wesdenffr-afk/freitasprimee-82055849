@@ -3,6 +3,7 @@ import { useNavigate } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { ArrowLeft } from "lucide-react";
 import blazeNewLogo from "@/assets/blaze-new-logo.jpg";
+import logoBranco from "@/assets/logo-branco.webp";
 import HackerBackground from "@/components/HackerBackground";
 import ResultsDisplay from "@/components/ResultsDisplay";
 
@@ -109,27 +110,55 @@ const EstrategiaBranco = () => {
           </button>
         </div>
 
-        {/* Aguardando Section */}
-        <div className="mt-4 mx-4 p-6 bg-[#2a2d3a] rounded-2xl">
-          <h2 className="text-center text-2xl font-bold text-gray-300 mb-3">
-            {showSignal ? 'Entrar no Branco' : 'Aguardando'}
-          </h2>
-          <p className="text-center text-gray-400 text-sm">
-            <span className="text-white font-bold">{showSignal ? '1' : '0'}</span> Pessoas Fizeram Entrada!
-          </p>
-        </div>
+        {/* Entry Status Section */}
+        {showSignal && (
+          <>
+            {/* Entrada Confirmada Header */}
+            <div className="mt-4 mx-4 text-center">
+              <h2 className="text-2xl font-bold text-white/90">Entrada Confirmada</h2>
+            </div>
+
+            {/* Horário e Logo Section */}
+            <div className="mt-6 mx-4 flex items-center justify-between gap-4">
+              {/* Horário - Left Side */}
+              <div className="flex-1 bg-[#3a3d4a]/80 backdrop-blur-sm rounded-2xl p-6 flex flex-col items-start justify-center border border-white/10">
+                <p className="text-sm text-white/70 font-medium mb-1">Horário</p>
+                <p className="text-5xl font-black text-white tabular-nums">{nextSignalTime}</p>
+              </div>
+
+              {/* Logo - Right Side */}
+              <div className="flex-1 bg-[#3a3d4a]/80 backdrop-blur-sm rounded-2xl p-6 flex flex-col items-center justify-center border border-white/10">
+                <p className="text-sm text-white/70 font-medium mb-3">Entrada</p>
+                <div className="w-20 h-20 bg-white rounded-2xl flex items-center justify-center p-3">
+                  <img src={logoBranco} alt="Branco" className="w-full h-full object-contain" />
+                </div>
+              </div>
+            </div>
+
+            {/* Pessoas Fizeram Entrada */}
+            <div className="mt-4 mx-4 text-center">
+              <p className="text-lg text-white/80 font-medium">
+                <span className="text-white font-bold">48</span> Pessoas Fizeram Entrada!
+              </p>
+            </div>
+          </>
+        )}
+
+        {!showSignal && (
+          <div className="mt-4 mx-4 p-6 bg-[#2a2d3a] rounded-2xl">
+            <h2 className="text-center text-2xl font-bold text-gray-300 mb-3">
+              Aguardando
+            </h2>
+            <p className="text-center text-gray-400 text-sm">
+              <span className="text-white font-bold">0</span> Pessoas Fizeram Entrada!
+            </p>
+          </div>
+        )}
 
         {/* Center Signal Area */}
         <div className="flex-1 flex flex-col items-center justify-center px-4 py-8">
           {showSignal ? (
             <div className="space-y-6 w-full max-w-sm">
-              {/* Time Display */}
-              <div className="text-center">
-                <div className="inline-block bg-[#2a2d3a] border-2 border-dashed border-red-500 rounded-2xl px-12 py-4">
-                  <p className="text-5xl font-black text-white tabular-nums tracking-wider">{nextSignalTime}</p>
-                </div>
-              </div>
-              
               {/* Assertiveness */}
               <div className="text-center space-y-2">
                 <h3 className="text-xl font-bold text-white">Assertividade {assertiveness}%</h3>
