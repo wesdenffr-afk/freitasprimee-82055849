@@ -60,8 +60,8 @@ const HackerBackground = () => {
           // Calculate opacity - brighter at the bottom of the trail
           const opacity = (index + 1) / column.characters.length;
           
-          // Red color with varying opacity
-          ctx.fillStyle = `rgba(239, 68, 68, ${opacity})`;
+          // Green Matrix color with varying opacity
+          ctx.fillStyle = `rgba(0, 255, 65, ${opacity})`;
           ctx.font = `${fontSize}px monospace`;
           
           // Draw character
