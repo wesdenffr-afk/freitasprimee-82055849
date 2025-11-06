@@ -2,8 +2,8 @@ import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { ArrowLeft } from "lucide-react";
-import blazeNewLogo from "@/assets/blaze-new-logo.jpg";
 import logoBranco from "@/assets/logo-branco.webp";
+import logoBlazeCircular from "@/assets/logo-blaze-circular.jpg";
 import blazeTargetLogo from "@/assets/blaze-target-logo.jpg";
 import HackerBackground from "@/components/HackerBackground";
 import ResultsDisplay from "@/components/ResultsDisplay";
@@ -123,9 +123,9 @@ const EstrategiaBranco = () => {
               <div className="flex justify-center mb-6">
                 <div className="relative w-32 h-32">
                   <img 
-                    src={blazeTargetLogo} 
+                    src={logoBlazeCircular} 
                     alt="Blaze" 
-                    className="w-full h-full object-contain" 
+                    className="w-full h-full rounded-full object-cover shadow-2xl ring-4 ring-red-500/30" 
                   />
                 </div>
               </div>
@@ -199,7 +199,7 @@ const EstrategiaBranco = () => {
                   />
                   {/* Inner circle */}
                   <div className="absolute inset-2 rounded-full bg-[#2a2d3a] flex items-center justify-center">
-                    <img src={blazeNewLogo} alt="Blaze" className="w-20 h-20 rounded-lg object-cover" />
+                    <img src={blazeTargetLogo} alt="Blaze" className="w-24 h-24 object-contain" />
                   </div>
                 </div>
               </div>
