@@ -4,7 +4,7 @@ import { Button } from "@/components/ui/button";
 import { ArrowLeft } from "lucide-react";
 import logoBranco from "@/assets/logo-branco.webp";
 import logoBlazeCircular from "@/assets/logo-blaze-circular.jpg";
-import blazeTargetLogo from "@/assets/blaze-target-logo.jpg";
+import blazeTargetLogo from "@/assets/blaze-target-logo-nobg.png";
 import HackerBackground from "@/components/HackerBackground";
 import ResultsDisplay from "@/components/ResultsDisplay";
 
@@ -192,15 +192,8 @@ const EstrategiaBranco = () => {
             <div className="space-y-8 w-full max-w-sm">
               {/* Blaze Icon with animation */}
               <div className="flex justify-center">
-                <div className="relative w-40 h-40">
-                  {/* Rotating border */}
-                  <div className="absolute inset-0 rounded-full border-4 border-transparent border-t-red-500 border-r-red-500 animate-spin" 
-                       style={{ animationDuration: '3s' }}
-                  />
-                  {/* Inner circle */}
-                  <div className="absolute inset-2 rounded-full bg-[#2a2d3a] flex items-center justify-center">
-                    <img src={blazeTargetLogo} alt="Blaze" className="w-24 h-24 object-contain" />
-                  </div>
+                <div className="relative w-64 h-64">
+                  <img src={blazeTargetLogo} alt="Blaze" className="w-full h-full object-contain" />
                 </div>
               </div>
 
