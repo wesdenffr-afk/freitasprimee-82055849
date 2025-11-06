@@ -173,23 +173,13 @@ const EstrategiaCores = () => {
                 </div>
 
                 {/* Logo Center - Color Signal */}
-                <div className="bg-white rounded-2xl p-4 flex items-center justify-center">
-                  <img 
-                    src={recommendedColor === '🔴' ? redCircleSignal : blackCircleSignal} 
-                    alt={recommendedColor === '🔴' ? 'Vermelho' : 'Preto'} 
-                    className="w-20 h-20 object-contain" 
-                  />
+                <div className={`rounded-2xl p-4 flex items-center justify-center ${recommendedColor === '🔴' ? 'bg-red-500' : 'bg-black border-2 border-white/20'}`}>
                 </div>
 
                 {/* Entrada - Right */}
                 <div className="bg-[#2a2d3a]/60 rounded-2xl p-4 flex flex-col items-center justify-center">
                   <p className="text-xs text-white/60 font-medium mb-2">Entrada</p>
-                  <div className="w-12 h-12 bg-white rounded-xl flex items-center justify-center">
-                    <img 
-                      src={recommendedColor === '🔴' ? redCircleSignal : blackCircleSignal} 
-                      alt="Entrada" 
-                      className="w-10 h-10 object-contain" 
-                    />
+                  <div className={`w-12 h-12 rounded-xl ${recommendedColor === '🔴' ? 'bg-red-500' : 'bg-black border-2 border-white/20'}`}>
                   </div>
                 </div>
               </div>
