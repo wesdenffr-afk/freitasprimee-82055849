@@ -4,7 +4,7 @@ import { Button } from "@/components/ui/button";
 import { ArrowLeft } from "lucide-react";
 import logoBranco from "@/assets/logo-branco.webp";
 import logoBlazeCircular from "@/assets/logo-blaze-circular.jpg";
-import blazeTargetLogo from "@/assets/blaze-target-logo-nobg.png";
+import blazeTargetLogo from "@/assets/blaze-target-nobg.png";
 import HackerBackground from "@/components/HackerBackground";
 import ResultsDisplay from "@/components/ResultsDisplay";
 
