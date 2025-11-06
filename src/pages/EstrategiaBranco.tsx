@@ -4,7 +4,7 @@ import { Button } from "@/components/ui/button";
 import { ArrowLeft } from "lucide-react";
 import blazeNewLogo from "@/assets/blaze-new-logo.jpg";
 import logoBranco from "@/assets/logo-branco.webp";
-import logoBlazeCircular from "@/assets/logo-blaze-circular.jpg";
+import blazeTargetLogo from "@/assets/blaze-target-logo.jpg";
 import HackerBackground from "@/components/HackerBackground";
 import ResultsDisplay from "@/components/ResultsDisplay";
 
@@ -123,9 +123,9 @@ const EstrategiaBranco = () => {
               <div className="flex justify-center mb-6">
                 <div className="relative w-32 h-32">
                   <img 
-                    src={logoBlazeCircular} 
+                    src={blazeTargetLogo} 
                     alt="Blaze" 
-                    className="w-full h-full rounded-full object-cover shadow-2xl ring-4 ring-red-500/30" 
+                    className="w-full h-full object-contain" 
                   />
                 </div>
               </div>
